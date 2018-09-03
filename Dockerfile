@@ -30,4 +30,4 @@ COPY container-files /
 
 EXPOSE 4444 5900
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bootstrap.sh"]
