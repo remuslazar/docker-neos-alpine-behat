@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv /bin/bash
+set -ex
+
+echo "$(getent hosts  web | awk '{print$1}') behat.dev.local" >> /etc/hosts
