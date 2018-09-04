@@ -104,11 +104,13 @@ cd ~/www/Packages/Sites/CRON.DazSite/Tests/Behavior
 ~/www/bin/behat --ansi -c behat.yml Features/DemoContent.feature
 ```
 
-----
+### Unattended mode
 
-How to build
-------------
+Using docker-compose `exec` feature:
 
-```bash
-docker build -t remuslazar/neos-alpine-behat:php56 .
+```
+docker-compose -f docker-compose.yml -f docker-compose.behat.yml \
+  exec behat-runner su www-data -c '
+   cd www/Packages/Sites/CRON.DazSite/Tests/Behavior;
+   ~/www/bin/behat --ansi -c behat.yml Features/NewsDateHideBefore.feature'
 ```
