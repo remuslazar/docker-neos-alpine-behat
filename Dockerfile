@@ -1,4 +1,4 @@
-FROM remuslazar/docker-neos-alpine:testing
+FROM remuslazar/docker-neos-alpine:testing-php70
 MAINTAINER Remus Lazar <rl@cron.eu>
 
 # install jre, selenium, firefox and xvfb
