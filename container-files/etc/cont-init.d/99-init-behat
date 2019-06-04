@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv /bin/bash
+set -ex
+
+echo "127.0.0.1 behat.dev.local" >> /etc/hosts
+
+/setup-behat-yml.sh "behat.dev.local:${WWW_PORT}/"

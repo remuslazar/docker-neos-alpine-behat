@@ -24,8 +24,7 @@ ENV \
   VNC_PASSWORD=password
 
 # remove unneeded services for our scope
-RUN rm -rf /etc/services.d/nginx /etc/services.d/php-fpm /etc/services.d/cron \
-  && rm -rf /etc/cont-init.d/10-init-neos \
+RUN rm -rf /etc/services.d/cron \
   && rm -rf /etc/cont-init.d/00-init-xdebug \
   && rm -rf /etc/cont-init.d/00-init-backups
 
