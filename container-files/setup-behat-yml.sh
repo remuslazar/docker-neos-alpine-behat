@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -ex
 
 function behat_configure_yml_files() {
   local behat_vhost=$@
