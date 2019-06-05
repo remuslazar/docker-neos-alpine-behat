@@ -1,4 +1,4 @@
-FROM remuslazar/docker-neos-alpine:testing
+FROM remuslazar/docker-neos-alpine:v2
 MAINTAINER Remus Lazar <rl@cron.eu>
 
 # install jre, selenium, firefox and xvfb
@@ -31,3 +31,6 @@ RUN rm -rf /etc/services.d/cron \
 COPY container-files /
 
 EXPOSE 4444 5900
+
+ENV FLOW_CONTEXT Development/Behat
+ENV DB_DATABASE db_behat
